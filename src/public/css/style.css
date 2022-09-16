@@ -7,7 +7,7 @@
 
 :root {
   font-size: 62.5%;
-  --primary-color: hsl(256, 55%, 37%);
+  --primary-color: hsl(0, 0%, 11%);
   --light: rgb(255, 255, 255);
 }
 html,

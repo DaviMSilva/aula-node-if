@@ -17,7 +17,6 @@ const db = require('./src/models/db')
 const UserController = require('./src/controllers/UserController')
 const { verifyIfSessionExists } = require('./src/controllers/UserController')
 
-
 app.use(express.json())
 app.use(session({ secret: 'asdpfjasofapjf' }))
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -33,15 +32,18 @@ app.use('/users', UserRoute)
 app.get('/', (req, res) => {
   res.redirect('users/login')
 })
-app.get('/home', 
-(req,res,next)=>{
-  if(req.session.login){
-    return next()
+app.get(
+  '/home',
+  (req, res, next) => {
+    if (req.session.login) {
+      return next()
+    }
+    res.redirect('users/login')
+  },
+  (req, res) => {
+    res.render('home')
   }
-  res.redirect('users/login')
-},(req,res)=>{
-  res.render('home')
-})
+)
 
 db.sync()
   .then(() => {

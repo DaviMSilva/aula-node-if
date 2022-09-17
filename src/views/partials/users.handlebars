@@ -1,0 +1,11 @@
+
+<div class="userPartials">
+  <h3>Usuário:</h3>
+  <label>Nome:{{this.username}}</label>
+  <label>Senha:{{this.password}}</label>
+  <label>id:{{this.id}}</label>
+  <form action="remove" method="post">
+    <input type="text" name="id" hidden value="{{this.id}}">
+    <input type="submit" value="X">
+  </form>
+</div>

@@ -40,21 +40,37 @@ module.exports = class UserController {
       .then(result => {
         if (result.password === password) {
           req.session.login = username
-          
-        }
-        else{
+        } else {
           res.render('users/login', { alert: true })
         }
         res.redirect('/home')
       })
       .catch(err => {
         console.log(err)
-        
       })
   }
 
-  static logout(req,res){
+  static logout(req, res) {
     req.session.login = null
     res.redirect('login')
+  }
+
+  static async allUsers(req, res) {
+    const users = await User.findAll({
+      raw: true,
+      attributes: ['username', 'password', 'id']
+    })
+
+    res.render('users/allusers', { users })
+  }
+
+  static async remove(req, res) {
+    await User.destroy({
+      where: {
+        id: req.body.id
+      }
+    }).then(result => {
+      res.render('home')
+    })
   }
 }

@@ -9,15 +9,17 @@ module.exports = class CarController {
             velMax : req.boy.velMax
         }
 
-        Car.create({carForm})
+        await Car.create({carForm})
         .then(result =>{
             console.log('criado com sucesso')
+            res.render('cars/carForm')
+
         })
         .catch(err =>{
             console.log(err)
         })
     }
     static newCarView(req,res){
-        
+        res.render('cars/carForm')
     }
 }

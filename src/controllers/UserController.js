@@ -52,7 +52,9 @@ module.exports = class UserController {
 
   static logout(req, res) {
     req.session.login = null
-    res.redirect('login')
+  }
+  static logoutView(req, res){
+    res.render('users/logout')
   }
 
   static async allUsers(req, res) {

@@ -13,7 +13,7 @@ module.exports = class UserController {
   }
   static async newUserSave(req, res) {
     const { username, password } = req.body
-    console.log(username, password)
+  
     await User.create({ username: username, password: password })
       .then(result => {
         console.log('criado com sucess')

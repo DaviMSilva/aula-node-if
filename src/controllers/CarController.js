@@ -6,7 +6,10 @@ module.exports = class CarController {
     const carForm = {
       model: req.body.model,
       potencia: req.body.potencia,
-      velMax: req.body.velMax
+      velMax: req.body.velMax,
+      fabricante: req.body.fabricante,
+      ano: req.body.ano,
+      valor: req.body.valor
     }
     console.log(carForm)
 
@@ -58,13 +61,17 @@ module.exports = class CarController {
     const carForm = {
       model: req.body.model,
       potencia: req.body.potencia,
-      velMax: req.body.velMax
+      velMax: req.body.velMax,
+      fabricante: req.body.fabricante,
+      ano: req.body.ano,
+      valor: req.body.valor
+      
     }
     console.log(carForm)
 
     await Car.update(carForm, { where: { id: id } })
       .then(result => {
-        console.log('criado com sucesso')
+        console.log('atualizado com sucesso')
         res.redirect('/cars/all')
       })
       .catch(err => {

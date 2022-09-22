@@ -29,6 +29,27 @@ const Car = db.define('cars', {
     notEmpty: {
       msg: 'velocidade maxima nao pode ser em branco'
     }
+  },
+  fabricante: {
+    type: Sequelize.STRING,
+    allowNull: false,
+    notEmpty: {
+      msg: 'password nao pode ser em branco'
+    }
+  },
+  ano: {
+    type: Sequelize.STRING,
+    allowNull: false,
+    notEmpty: {
+      msg: 'password nao pode ser em branco'
+    }
+  },
+  valor: {
+    type: Sequelize.STRING,
+    allowNull: false,
+    notEmpty: {
+      msg: 'password nao pode ser em branco'
+    }
   }
 })
 

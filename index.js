@@ -11,11 +11,12 @@ const hbs = handlebars.create({
 
 //rotas
 const UserRoute = require('./src/routes/userRoute')
+const CarRoute = require('./src/routes/carRoute')
 //Model
 const db = require('./src/models/db')
 //modulos
 const UserController = require('./src/controllers/UserController')
-const { verifyIfSessionExists } = require('./src/controllers/UserController')
+const CarController = require('./src/controllers/CarController')
 
 app.use(express.json())
 app.use(session({ secret: 'asdpfjasofapjf' }))
@@ -28,6 +29,7 @@ app.set('view engine', 'handlebars')
 app.use(express.static(__dirname + '/src/public'))
 
 app.use('/users', UserRoute)
+app.use('/cars', CarRoute)
 
 app.get('/', (req, res) => {
   res.redirect('users/login')

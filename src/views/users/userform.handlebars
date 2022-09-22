@@ -1,12 +1,17 @@
 
-<div class="login">
+<div class="login container card fs-3 p-2">
     <h2>Cadastre-se</h2>
     <form action="add" method="POST">
-        <label for="username">Usuário</label>
-        <input type="text" name="username" >
-        <label for="password">Senha</label>
-        <input type="password" name="password">
-        <input type="submit" value="Cadastrar">
+        <div class="mb-3">
+            <label for="username" class="form-label">Usuário</label>
+            <input type="text" name="username"  class="form-control form-control-lg">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Senha</label>
+            <input type="password" name="password" class="form-control form-control-lg">
+        </div>
+        
+        <input type="submit" value="Cadastrar" class="btn btn-primary btn-lg"> 
 
     </form>
 </div>

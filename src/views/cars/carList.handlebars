@@ -1,0 +1,16 @@
+<div class="d-inline-flex p-2">
+
+    <div class="p-2"><h2>Modelos Cadastrados</h2></div>
+    <form action="/cars/add" method="get" class="p-2">
+      <input type="submit" value="Adicionar" class="btn btn-outline-primary btn-large">
+    </form> 
+</div>
+
+{{#each cars}}
+<ul class="list-group">
+  <li class="list-group-item">
+    {{> cars}}
+  </li>
+</ul>
+
+{{/each}}

@@ -1,0 +1,18 @@
+<div class="carsPartials h3 d-flex p-2 align-items-center justify-content-between">
+  <div class="p-2 ">
+    <label>{{this.id}}</label>
+    <label>{{this.model}} - </label>
+    <label>Potência:{{this.potencia}}</label>
+    <label>{{this.velMax}} Km/h</label>
+  </div>
+  
+  <div class="d-flex">
+      <div class="p-2 ">
+      <a href="/cars/edit/{{this.id}}" class="btn btn-warning btn-lg">Editar</a>  
+    </div>
+    <form action="/cars/remove" method="POST" class="p-2">
+      <input type="text" name="id" value="{{this.id}}", hidden>
+      <input type="submit" value="Excluir" class="btn btn-danger btn-lg" >
+    </form>
+  </div>
+</div>

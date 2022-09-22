@@ -2,7 +2,8 @@ const Sequelize = require('sequelize')
 
 const sequelize = new Sequelize('node', 'root', '', {
     host: 'localhost',
-    dialect: 'mysql' /* one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' */
+    dialect: 'mysql', /* one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' */
+    omitNull: true
   });
 
 sequelize.authenticate()

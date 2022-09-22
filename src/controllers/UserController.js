@@ -75,4 +75,6 @@ module.exports = class UserController {
       res.render('home')
     })
   }
+
+  
 }

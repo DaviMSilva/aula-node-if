@@ -1,13 +1,21 @@
-<div class="login">
-    <h2>Adicione o carro</h2>
+<div class="login container fs-3 card p-2">
+    <h1 class="p-2">Adicione o carro</h1>
     <form action="add" method="POST">
-        <label for="model">Modelo</label>
-        <input type="text" name="model" >
-        <label for="potencia">Potência</label>
-        <input type="text" name="potencia">
-        <label for="velMax">Velocidade Máxima em KM/H</label>
-        <input type="number" name="velMax">
-        <input type="submit" value="Cadastrar">
+        <div class="mb-3">
+            <label for="model" class="form-label">Modelo</label>
+            <input type="text" name="model" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="potencia" class="form-label">Potência</label>
+            <input type="text" name="potencia" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="velMax" class="form-label">Velocidade Máxima em KM/H</label>
+            <input type="number" name="velMax" class="form-control">
+        </div>
+        
+        
+        <input type="submit" value="Cadastrar" class="btn btn-primary btn-lg">
 
     </form>
 </div>

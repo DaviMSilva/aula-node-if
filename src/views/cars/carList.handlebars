@@ -5,12 +5,14 @@
       <input type="submit" value="Adicionar" class="btn btn-outline-primary btn-large">
     </form> 
 </div>
-
+<br>
 {{#each cars}}
-<ul class="list-group">
-  <li class="list-group-item">
-    {{> cars}}
-  </li>
-</ul>
+<div class="d-inline-flex mb-3 ">
+  <div class=" flex-row p-2">
+
+  {{> cars}}
+  </div>
+</div>
+  
 
 {{/each}}

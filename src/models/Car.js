@@ -1,3 +1,4 @@
+const sequelize = require('sequelize')
 const Sequelize = require('sequelize')
 const db = require('./db.js')
 
@@ -50,7 +51,7 @@ const Car = db.define('cars', {
     notEmpty: {
       msg: 'password nao pode ser em branco'
     }
-  }
+  },
 })
 
 Car.sync()

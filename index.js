@@ -5,6 +5,7 @@ const bodyParser = require('body-parser')
 const handlebars = require('express-handlebars')
 const session = require('express-session')
 
+
 const hbs = handlebars.create({
   partialsDir: ['.src/views/partials']
 })
@@ -20,6 +21,7 @@ const CarController = require('./src/controllers/CarController')
 
 app.use(express.json())
 app.use(session({ secret: 'asdpfjasofapjf' }))
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 
 // View Engine Setup

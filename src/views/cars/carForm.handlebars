@@ -3,15 +3,15 @@
     <form action="add" method="POST">
         <div class="mb-3">
             <label for="model" class="form-label">Modelo</label>
-            <input type="text" name="model" class="form-control">
+            <input type="text" name="model" class="form-control" >
         </div>
         <div class="mb-3">
             <label for="potencia" class="form-label">Potência</label>
-            <input type="text" name="potencia" class="form-control">
+            <input type="text" name="potencia" class="form-control" >
         </div>
         <div class="mb-3">
             <label for="velMax" class="form-label">Velocidade Máxima em KM/H</label>
-            <input type="number" name="velMax" class="form-control">
+            <input type="number" name="velMax" class="form-control" >
         </div>
         <div class="mb-3">
             <label for="fabricante" class="form-label">Fabricante</label>
@@ -19,11 +19,16 @@
         </div>
         <div class="mb-3">
             <label for="ano" class="form-label">Ano</label>
-            <input type="text" name="ano" class="form-control">
+            <input type="text" name="ano" class="form-control" >
         </div>
         <div class="mb-3">
             <label for="valor" class="form-label">Valor</label>
-            <input type="text" name="valor" class="form-control">
+            <input type="text" name="valor" class="form-control" >
+        </div>
+        <div class="mb-3">
+            <label for="cardimg" class="form-label">Imagem</label>
+            <input type="file" name="cardimg" class="form-control" >
+            <img id="cardimg">
         </div>
         
         <input type="submit" value="Cadastrar" class="btn btn-primary btn-lg">

@@ -1,14 +1,20 @@
-<div class="carsPartials h3 d-flex p-2 align-items-center justify-content-between">
-  <div class="p-2 ">
-    <label>{{this.id}}</label>
-    <label>{{this.model}} - </label>
-    <label>Potência:{{this.potencia}}</label>
-    <label>{{this.velMax}} Km/h -</label>
-    <label>Fabricante:{{this.fabricante}} -</label>
-    <label>Ano:{{this.ano}} -</label>
-    <label>Valor: R$ {{this.valor}}</label>
+
+<div class="p-2 card d-flex" style="width: 30rem;">
+      
+  <img src="https://img.freepik.com/free-photo/abstract-luxury-plain-blur-grey-black-gradient-used-as-background-studio-wall-display-your-products_1258-63644.jpg?w=1800&t=st=1664510264~exp=1664510864~hmac=c872ac98ea6ff755f63966547e948581915bf9db64ac8ae706ed037794d51be5" alt="" class="card-img-top">
+  <div class="card-body">
+
+    <label hidden>{{this.id}}</label>
+    <label class="card-title h3">{{this.model}}</label>
+    <div class="card-text h4">
+
+      <label>Potência:{{this.potencia}}</label>
+      <label>{{this.velMax}} Km/h -</label>
+      <label>Fabricante:{{this.fabricante}} -</label>
+      <label>Ano:{{this.ano}} -</label>
+      <label>Valor: R$ {{this.valor}}</label>
+    </div>
   </div>
-  
   <div class="d-flex">
       <div class="p-2 ">
       <a href="/cars/edit/{{this.id}}" class="btn btn-warning btn-lg">Editar</a>  

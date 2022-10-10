@@ -49,7 +49,7 @@ module.exports = class CarController {
   static async updateCarView(req, res) {
     const id = req.params.id;
     try {
-      const car = await Car.findOne({ wher: { id: id }, raw: true });
+      const car = await Car.findOne({ where: { id: id }, raw: true });
       res.render('cars/carUpdateForm', { car });
     } catch (err) {
       console.log(err);

@@ -1,6 +1,5 @@
-const sequelize = require('sequelize')
-const Sequelize = require('sequelize')
-const db = require('./db.js')
+const Sequelize = require('sequelize');
+const db = require('./db.js');
 
 const Car = db.define('cars', {
   id: {
@@ -51,9 +50,9 @@ const Car = db.define('cars', {
     notEmpty: {
       msg: 'password nao pode ser em branco'
     }
-  },
-})
+  }
+});
 
-Car.sync()
+Car.sync();
 
-module.exports = Car
+module.exports = Car;
